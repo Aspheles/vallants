@@ -30,8 +30,13 @@ const Navbar: React.FC = () => {
                 to={path}
                 className={({ isActive }) =>
                   clsx(
-                    "text-[#6A00A1] transition-colors hover:text-purple-700",
-                    { underline: isActive }
+                    "text-gray-800 transition-colors duration-300 ease-in-out hover:text-purple-700 focus:text-purple-700", // Smooth color transition
+                    {
+                      "border-b-4 border-[#6A00A1] pb-1 text-[#6A00A1]":
+                        isActive, // Active state with more space (increased padding)
+                      "hover:border-b-4 hover:border-[#6A00A1] hover:pb-1":
+                        !isActive, // Hover underline with padding
+                    }
                   )
                 }
               >
