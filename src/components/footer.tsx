@@ -94,7 +94,7 @@ const Footer: React.FC = () => {
           <p className="text-gray-500 text-sm">
             &copy; {new Date().getFullYear()}{" "}
             <a
-              href="https://www.creative-tim.com"
+              href=""
               className="text-blue-500 hover:text-blue-700"
               target="_blank"
               rel="noopener noreferrer"
