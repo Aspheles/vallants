@@ -24,7 +24,7 @@ const Navbar: React.FC = () => {
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex space-x-12 text-2xl font-semibold">
-          {["/", "/about", "/cases", "/pricing"].map((path, index) => (
+          {["/", "/about", "/pricing"].map((path, index) => (
             <li key={index}>
               <NavLink
                 to={path}
@@ -57,7 +57,7 @@ const Navbar: React.FC = () => {
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
         <ul className="md:hidden flex flex-col items-center space-y-6 bg-[#f9f9f9] py-4">
-          {["/", "/about", "/cases", "/pricing"].map((path, index) => (
+          {["/", "/about", "/pricing"].map((path, index) => (
             <li key={index}>
               <NavLink
                 to={path}
