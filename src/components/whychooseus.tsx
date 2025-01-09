@@ -1,23 +1,23 @@
 const WhyChooseUs = () => {
   const features = [
     {
-      icon: <img src="./advantages/palette.svg" />,
+      icon: <img src="./advantages/img_wcu01.png" />,
       title:
         "Offer custom-designed websites tailor to the budgets of small businesses",
       description: "Tailor to the budgets of small businesses",
     },
     {
-      icon: <img src="./advantages/graph.svg" />,
+      icon: <img src="./advantages/img_wcu02.png" />,
       title: "Create scalable websites that grow with the business",
       description: "That grow with the business",
     },
     {
-      icon: <img src="./advantages/bulb.svg" />,
+      icon: <img src="./advantages/img_wcu03.png" />,
       title: "Provide affordable solutions without sacrificing quality",
       description: "Without sacrificing quality",
     },
     {
-      icon: <img src="./advantages/hands.svg" />,
+      icon: <img src="./advantages/img_wcu04.png" />,
       title: "Focused on helping startups build their identity from ground up",
       description: "Build their identity from ground up",
     },
