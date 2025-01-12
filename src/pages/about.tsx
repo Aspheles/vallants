@@ -68,7 +68,7 @@ const About: React.FC = () => {
                 loading="lazy"
               />
               <h1 className="mt-4 text-2xl font-semibold text-white capitalize">
-                Wilkins Mandoza
+                Wilkins Mendoza
               </h1>
               <h1 className="mt-4 text-1xl font-semibold text-gray-100 capitalize">
                 Lead Designer
