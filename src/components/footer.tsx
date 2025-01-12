@@ -1,5 +1,5 @@
 import React from "react";
-import { FaTwitter, FaGoogle, FaDiscord } from "react-icons/fa";
+import { FaGoogle, FaDiscord, FaInstagram } from "react-icons/fa";
 import { useModal } from "../utils/ModalContext";
 import { Link } from "react-router-dom";
 
@@ -18,25 +18,13 @@ const Footer: React.FC = () => {
             </p>
             <div className="flex justify-center lg:justify-start mt-4 space-x-4">
               <a
-                href="#"
-                className="bg-white p-3 rounded-full shadow text-blue-500 hover:bg-blue-50 transition-colors duration-300"
-                aria-label="Twitter"
+                href="https://www.instagram.com/_vallants/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-2 rounded-full shadow text-white hover:opacity-90 transition duration-300 ease-in-out"
+                aria-label="Instagram"
               >
-                <FaTwitter size={20} />
-              </a>
-              <a
-                href="#"
-                className="bg-white p-3 rounded-full shadow text-red-500 hover:bg-red-50 transition-colors duration-300"
-                aria-label="Google"
-              >
-                <FaGoogle size={20} />
-              </a>
-              <a
-                href="#"
-                className="bg-white p-3 rounded-full shadow text-indigo-500 hover:bg-indigo-50 transition-colors duration-300"
-                aria-label="Discord"
-              >
-                <FaDiscord size={20} />
+                <FaInstagram size={20} />
               </a>
             </div>
           </div>
