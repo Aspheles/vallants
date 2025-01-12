@@ -1,11 +1,37 @@
 import React from "react";
+import { FaLinkedin } from "react-icons/fa6";
+
+type Member = {
+  image: string;
+  name: string;
+  position: string;
+  linkedin: string;
+};
 
 const About: React.FC = () => {
+  const members: Member[] = [
+    {
+      image: "./team/yavuz.png",
+      name: "Yavuz Dereli",
+      position: "Lead Developer & Owner",
+      linkedin: "https://www.linkedin.com/in/yavuz-dereli/",
+    },
+    {
+      image: "./team/yuli.png",
+      name: "Faruyili Pazli",
+      position: "Digital Marketing Specialist",
+      linkedin: "https://www.linkedin.com/in/faruyili-pazli-123564107/",
+    },
+    {
+      image: "./team/placeholder.jpg",
+      name: "Wilkins Mendoza",
+      position: "Lead Designer",
+      linkedin: "",
+    },
+  ];
+
   return (
     <div>
-      {/* Hero Section */}
-
-      {/* Executive Team Section */}
       <section
         className=""
         style={{
@@ -32,48 +58,35 @@ const About: React.FC = () => {
 
         <div className="container px-6 py-10 mx-auto -mt-72 sm:-mt-110 md:-mt-96">
           <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-16 md:grid-cols-2 xl:grid-cols-3">
-            <div className="flex flex-col items-center sm:p-6 rounded-xl">
-              <img
-                className="object-cover w-[20rem] rounded-xl"
-                src="./team/yavuz.png"
-                alt="Yavuz Dereli"
-                loading="lazy"
-              />
-              <h1 className="mt-4 text-2xl font-semibold text-white capitalize">
-                Yavuz Dereli
-              </h1>
-              <h1 className="mt-4 text-1xl font-semibold text-gray-100 capitalize">
-                Lead Developer & Owner
-              </h1>
-            </div>
-            <div className="flex flex-col items-center sm:p-6 p-12 rounded-xl">
-              <img
-                className="object-cover w-[20rem] rounded-xl"
-                src="./team/placeholder.jpg"
-                alt="Faruyili Pazli"
-                loading="lazy"
-              />
-              <h1 className="mt-4 text-2xl font-semibold text-white capitalize">
-                Faruyili Pazli
-              </h1>
-              <h1 className="mt-4 text-1xl font-semibold text-gray-100 capitalize">
-                Digital Marketing Specialist
-              </h1>
-            </div>
-            <div className="flex flex-col items-center sm:p-6 p-12 rounded-xl">
-              <img
-                className="object-cover w-[20rem] rounded-xl"
-                src="./team/placeholder.jpg"
-                alt="Wilkins Mandoza"
-                loading="lazy"
-              />
-              <h1 className="mt-4 text-2xl font-semibold text-white capitalize">
-                Wilkins Mendoza
-              </h1>
-              <h1 className="mt-4 text-1xl font-semibold text-gray-100 capitalize">
-                Lead Designer
-              </h1>
-            </div>
+            {members.map((member) => (
+              <div className="flex flex-col items-center sm:p-6 rounded-xl">
+                <img
+                  className="object-cover w-[20rem] rounded-xl"
+                  src={member.image}
+                  alt={member.name}
+                  loading="lazy"
+                />
+                <div className="flex">
+                  <h1 className="text-2xl font-semibold text-white capitalize flex items-center p-1">
+                    {member.name}
+                    {member.linkedin !== "" && (
+                      <a
+                        href={member.linkedin}
+                        className="ml-2 text-blue-700 hover:text-blue-800 transition-colors duration-300"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FaLinkedin size={28} />
+                      </a>
+                    )}
+                  </h1>
+                </div>
+
+                <h1 className="mt-2 text-1xl font-semibold text-gray-100 capitalize">
+                  {member.position}
+                </h1>
+              </div>
+            ))}
           </div>
         </div>
       </section>
