@@ -1,11 +1,14 @@
-import CarouselElement from "../components/carousel";
+import WorkShowCase from "../components/workshowcase";
 import FAQSection from "../components/faq";
 import WhyChooseUs from "../components/whychooseus";
 import WorkFlow from "../components/workflow";
 import { FaArrowDown } from "react-icons/fa6";
 import { GrContact } from "react-icons/gr";
+import { useModal } from "../utils/ModalContext";
 
 const Home: React.FC = () => {
+  const { openModal } = useModal();
+
   return (
     <>
       {/* Hero Section */}
@@ -29,7 +32,10 @@ const Home: React.FC = () => {
               <FaArrowDown />
             </span>
           </button>
-          <button className="px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-800 transition flex items-center gap-2">
+          <button
+            onClick={openModal}
+            className="px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-800 transition flex items-center gap-2"
+          >
             Contact Us
             <span>
               <GrContact />
@@ -43,12 +49,7 @@ const Home: React.FC = () => {
       </section>
 
       <section className="py-12">
-        <div className="w-full h-[500px] bg-gradient-to-br from-[#1D0D4C] via-[#470981] to-[#A900FF]">
-          <h1 className="text-3xl md:text-4xl font-bold text-white drop-shadow-xl text-center pt-8">
-            Our Work
-          </h1>
-          <CarouselElement />
-        </div>
+        <WorkShowCase />
       </section>
 
       <section className="py-12 ">
