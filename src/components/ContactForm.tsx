@@ -16,25 +16,26 @@ const ContactFormModal: React.FC = () => {
     message: "",
   });
   const [isSending, setIsSending] = useState(false);
-  const [successMessage, setSuccessMessage] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
+  const [successMessage, setSuccessMessage] = useState<string>("");
+  const [errorMessage, setErrorMessage] = useState<string>("");
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData((prevState) => ({ ...prevState, [name]: value }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSending(true);
 
+    // Casting formData to Record<string, unknown> to satisfy emailjs type
     emailjs
       .send(
         "service_298jnrd",
         "template_tzsypnj",
-        formData,
+        formData as unknown as Record<string, unknown>, // Type assertion here
         "vswyuL8_O9AHF-XXS"
       )
       .then(
@@ -43,7 +44,7 @@ const ContactFormModal: React.FC = () => {
           setFormData({ name: "", email: "", message: "" });
         },
         (err) => {
-          console.log(err);
+          console.error(err);
           setErrorMessage("Failed to send your message. Please try again.");
         }
       )
