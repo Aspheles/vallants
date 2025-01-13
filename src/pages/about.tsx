@@ -23,7 +23,7 @@ const About: React.FC = () => {
       linkedin: "https://www.linkedin.com/in/faruyili-pazli-123564107/",
     },
     {
-      image: "./team/placeholder.jpg",
+      image: "./team/wilkins.png",
       name: "Wilkins Mendoza",
       position: "Lead Designer",
       linkedin: "",
@@ -59,7 +59,7 @@ const About: React.FC = () => {
         <div className="container px-6 py-10 mx-auto -mt-72 sm:-mt-110 md:-mt-96">
           <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-16 md:grid-cols-2 xl:grid-cols-3">
             {members.map((member) => (
-              <div className="flex flex-col items-center sm:p-6 rounded-xl">
+              <div className="flex flex-col items-center sm:p-6 rounded-full">
                 <img
                   className="object-cover w-[20rem] rounded-xl"
                   src={member.image}
