@@ -79,7 +79,7 @@ const Pricing: React.FC = () => {
           businesses.
         </p>
       </div>
-      <div className="grid lg:grid-cols-3 sm:gap-8 gap-8">
+      <div className="grid lg:grid-cols-3 sm:gap-8 gap-8 sm:text-left text-center sm:items-stretch items-center justify-center">
         {plans.map((plan) => (
           <div
             key={plan.name}
