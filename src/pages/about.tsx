@@ -61,7 +61,7 @@ const About: React.FC = () => {
             {members.map((member) => (
               <div className="flex flex-col items-center sm:p-6 rounded-full">
                 <img
-                  className="object-cover w-[20rem] rounded-xl"
+                  className="object-cover w-[20rem] rounded-full"
                   src={member.image}
                   alt={member.name}
                   loading="lazy"
