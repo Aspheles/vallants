@@ -26,7 +26,7 @@ const About: React.FC = () => {
       image: "./team/wilkins.png",
       name: "Wilkins Mendoza",
       position: "Lead Designer",
-      linkedin: "",
+      linkedin: "https://www.linkedin.com/in/wilkins-mendoza-b347a2346/",
     },
   ];
 
