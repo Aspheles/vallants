@@ -46,20 +46,20 @@ const FAQSection: React.FC = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-center text-white pb-12">
           Frequently Asked Questions
         </h2>
-        <div className="space-y-4">
+        <div className="flex flex-col items-center space-y-4">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-gray-200 rounded-lg shadow-sm border-none"
+              className="bg-gray-200 rounded-lg shadow-sm border-none w-full max-w-[1000px]"
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full flex justify-between items-center px-6 py-4 text-left font-medium text-gray-700 focus:outline-none "
+                className="w-full flex justify-between items-center px-6 py-4 text-left font-medium text-gray-700 focus:outline-none"
                 aria-expanded={openIndex === index}
               >
                 <span className="text-1xl">{faq.question}</span>
                 <svg
-                  className={`w-5 h-5 transition-transform duration-300 ${
+                  className={`w-5 h-5 transition-all duration-300 ease-in-out ${
                     openIndex === index ? "rotate-180" : "rotate-0"
                   }`}
                   xmlns="http://www.w3.org/2000/svg"
@@ -75,11 +75,16 @@ const FAQSection: React.FC = () => {
                   />
                 </svg>
               </button>
-              {openIndex === index && (
-                <div className="px-6 py-4 text-gray-600 bg-white rounded-b-lg">
-                  {faq.answer}
-                </div>
-              )}
+              <div
+                className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                  openIndex === index ? "max-h-screen" : "max-h-0"
+                }`}
+              >
+                <div
+                  className="px-6 py-4 text-gray-600 bg-white rounded-b-lg"
+                  dangerouslySetInnerHTML={{ __html: faq.answer }}
+                ></div>
+              </div>
             </div>
           ))}
         </div>
