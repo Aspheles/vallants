@@ -97,10 +97,11 @@ const About: React.FC = () => {
           <div className="lg:w-1/2 mb-8 lg:mb-0">
             <h2 className="text-3xl font-bold text-gray-800">Our Vision</h2>
             <p className="mt-4 text-gray-600 leading-relaxed">
-              At the heart of our company lies a commitment to innovation,
-              collaboration, and excellence. We aim to harness the power of
-              modern technologies to create solutions that make a difference,
-              empowering businesses and enriching lives.
+              To empower small businesses and startups by providing
+              custom-designed, high-quality websites tailored to their budgets,
+              ensuring scalable solutions that adapt and grow with them, and
+              helping them establish a strong online presence to thrive in the
+              digital landscape.
             </p>
             <ul className="mt-6 space-y-4">
               <li className="flex items-start">
