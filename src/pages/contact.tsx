@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { FiPhone, FiMail } from "react-icons/fi";
 
 interface FormData {
-  name: string;
+  firstName: string;
+  lastName: string;
   email: string;
   phone: string;
   message: string;
@@ -10,7 +12,8 @@ interface FormData {
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
-    name: "",
+    firstName: "",
+    lastName: "",
     email: "",
     phone: "",
     message: "",
@@ -40,7 +43,13 @@ const Contact: React.FC = () => {
       .then(
         () => {
           setSuccessMessage("Your message has been sent successfully!");
-          setFormData({ name: "", email: "", phone: "", message: "" });
+          setFormData({
+            firstName: "",
+            lastName: "",
+            email: "",
+            phone: "",
+            message: "",
+          });
         },
         (err) => {
           console.error(err);
@@ -55,24 +64,43 @@ const Contact: React.FC = () => {
       <div className="w-[1600px] px-4 sm:px-6">
         <div className="grid lg:grid-cols-2 ">
           {/* Left Section */}
-          <div className="relative">
+          <div className="relative rounded-lg overflow-hidden shadow-lg">
+            {/* Background Image */}
             <img
-              src="/vision.jpg"
-              alt="Contact Illustration"
-              className="w-full h-full rounded-l-lg bg-blend-multiply bg-indigo-700 object-cover"
+              src="/contact.jpg"
+              alt="Contact"
+              className="w-full h-full object-cover bg-blend-multiply bg-indigo-700"
             />
-            <h1 className="absolute top-11 left-11 text-white text-4xl font-bold">
-              Contact us
-            </h1>
-            <div className="absolute bottom-0 w-full p-8">
-              <div className="bg-white rounded-lg py-3 px-3">
-                <div className="mb-3">
-                  <h3 className="text-lg font-bold text-gray-800">Call Us</h3>
-                  <p className="text-gray-500">+31 644010132</p>
-                </div>
-                <div className="mb-3">
-                  <h3 className="text-lg font-bold text-gray-800">Email Us</h3>
-                  <p className="text-gray-500">vallants.dev@gmail.com</p>
+
+            {/* Overlay Content */}
+            <div className="absolute inset-0 bg-black bg-opacity-30 flex justify-center items-center">
+              <div className="bg-white p-6 rounded-lg shadow-lg w-[90%] md:w-[60%] text-center">
+                <h3 className="text-xl font-bold text-gray-800 mb-4">
+                  Get In Touch
+                </h3>
+                <div className="flex flex-col gap-4">
+                  {/* Phone */}
+                  <div className="flex items-center gap-3 text-gray-700">
+                    <FiPhone className="w-6 h-6 text-indigo-600" />
+                    <div>
+                      <p className="text-md text-gray-700">
+                        <a href="callto:+31 644010132">+31 644010132</a>
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Email */}
+                  <div className="flex items-center gap-3 text-gray-700">
+                    <FiMail className="w-6 h-6 text-indigo-600" />
+                    <div>
+                      <p className="text-md text-gray-700">
+                        <a href="mailto: vallants.dev@gmail.com">
+                          {" "}
+                          vallants.dev@gmail.com
+                        </a>
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -86,11 +114,20 @@ const Contact: React.FC = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
               <input
                 type="text"
-                name="name"
-                value={formData.name}
+                name="firstName"
+                value={formData.firstName}
                 onChange={handleInputChange}
-                placeholder="Name"
-                className="w-full h-12 text-gray-600 placeholder-gray-400 shadow-sm bg-transparent text-lg font-normal leading-7 rounded-full border border-gray-200 focus:outline-none pl-4"
+                placeholder="First Name"
+                className="w-full h-12 text-gray-600 placeholder-gray-500 shadow-sm bg-transparent text-lg font-normal leading-7 rounded-full border border-gray-200 focus:outline-none pl-4"
+                required
+              />
+              <input
+                type="text"
+                name="lastName"
+                value={formData.lastName}
+                onChange={handleInputChange}
+                placeholder="Last Name"
+                className="w-full h-12 text-gray-600 placeholder-gray-500 shadow-sm bg-transparent text-lg font-normal leading-7 rounded-full border border-gray-200 focus:outline-none pl-4"
                 required
               />
               <input
@@ -99,7 +136,7 @@ const Contact: React.FC = () => {
                 value={formData.email}
                 onChange={handleInputChange}
                 placeholder="Email"
-                className="w-full h-12 text-gray-600 placeholder-gray-400 shadow-sm bg-transparent text-lg font-normal leading-7 rounded-full border border-gray-200 focus:outline-none pl-4"
+                className="w-full h-12 text-gray-600 placeholder-gray-500 shadow-sm bg-transparent text-lg font-normal leading-7 rounded-full border border-gray-200 focus:outline-none pl-4"
                 required
               />
               <input
@@ -108,14 +145,14 @@ const Contact: React.FC = () => {
                 value={formData.phone}
                 onChange={handleInputChange}
                 placeholder="Phone (optional)"
-                className="w-full h-12 text-gray-600 placeholder-gray-400 shadow-sm bg-transparent text-lg font-normal leading-7 rounded-full border border-gray-200 focus:outline-none pl-4"
+                className="w-full h-12 text-gray-600 placeholder-gray-500 shadow-sm bg-transparent text-lg font-normal leading-7 rounded-full border border-gray-200 focus:outline-none pl-4"
               />
               <textarea
                 name="message"
                 value={formData.message}
                 onChange={handleInputChange}
                 placeholder="Message"
-                className="w-full h-32 text-gray-600 placeholder-gray-400 bg-transparent text-lg shadow-sm font-normal leading-7 rounded-2xl border border-gray-200 focus:outline-none pl-4 pt-2"
+                className="w-full h-32 text-gray-600 placeholder-gray-500 bg-transparent text-lg shadow-sm font-normal leading-7 rounded-2xl border border-gray-200 focus:outline-none pl-4 pt-2"
                 required
               />
               <button
