@@ -4,7 +4,7 @@ const WorkShowcase = () => {
       id: 1,
       image: "./moonlight.png",
       title: "Project Moonlight",
-      description: "A captivating project focused on modern design.",
+      description: "A captivating project focused on a photography portfolio",
       link: "https://moonlightphoto.nl",
     },
   ];
