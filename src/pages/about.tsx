@@ -50,8 +50,9 @@ const About: React.FC = () => {
               <span className="inline-block w-1 h-1 bg-blue-500 rounded-full"></span>
             </div>
             <p className="max-w-2xl mx-auto mt-6 text-center text-white">
-              Meet the talented individuals driving our mission forward with
-              passion and innovation.
+              Meet the experts who will create a custom-built website from the
+              ground up, designed to reflect your brand's identity with
+              creativity and care.
             </p>
           </div>
         </div>
