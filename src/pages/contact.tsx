@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
-import { FiPhone, FiMail } from "react-icons/fi";
+import { FiPhone, FiMail, FiLinkedin, FiMessageCircle } from "react-icons/fi";
 
 interface FormData {
   firstName: string;
@@ -63,9 +63,7 @@ const Contact: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-b from-[#1D0D4C] to-[#6A00A1] flex items-center justify-center py-8">
       <div className="w-[1600px] px-4 sm:px-6">
         <div className="grid lg:grid-cols-2 ">
-          {/* Left Section */}
-          <div className="relative rounded-lg overflow-hidden shadow-lg">
-            {/* Background Image */}
+          <div className="relative rounded-l-lg overflow-hidden shadow-lg">
             <img
               src="/contact.jpg"
               alt="Contact"
@@ -76,29 +74,62 @@ const Contact: React.FC = () => {
             <div className="absolute inset-0 bg-black bg-opacity-30 flex justify-center items-center">
               <div className="bg-white p-6 rounded-lg shadow-lg w-[90%] md:w-[60%] text-center">
                 <h3 className="text-xl font-bold text-gray-800 mb-4">
-                  Get In Touch
+                  Let's keep in touch!
                 </h3>
-                <div className="flex flex-col gap-4">
-                  {/* Phone */}
-                  <div className="flex items-center gap-3 text-gray-700">
-                    <FiPhone className="w-6 h-6 text-indigo-600" />
-                    <div>
-                      <p className="text-md text-gray-700">
-                        <a href="callto:+31 644010132">+31 644010132</a>
-                      </p>
+                <div className="flex flex-row">
+                  <div className="flex flex-col gap-4 justify-center">
+                    {/* Phone */}
+                    <div className="flex items-center gap-3 text-gray-700">
+                      <FiPhone className="w-6 h-6 text-indigo-600" />
+                      <div>
+                        <p className="text-md text-gray-700">
+                          <a href="callto:+31 644010132">+31 644010132</a>
+                        </p>
+                      </div>
                     </div>
-                  </div>
 
-                  {/* Email */}
-                  <div className="flex items-center gap-3 text-gray-700">
-                    <FiMail className="w-6 h-6 text-indigo-600" />
-                    <div>
-                      <p className="text-md text-gray-700">
-                        <a href="mailto: vallants.dev@gmail.com">
-                          {" "}
-                          vallants.dev@gmail.com
-                        </a>
-                      </p>
+                    {/* Email */}
+                    <div className="flex items-center gap-3 text-gray-700">
+                      <FiMail className="w-6 h-6 text-indigo-600" />
+                      <div>
+                        <p className="text-md text-gray-700">
+                          <a href="mailto:vallants.dev@gmail.com">
+                            vallants.dev@gmail.com
+                          </a>
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* LinkedIn */}
+                    <div className="flex items-center gap-3 text-gray-700">
+                      <FiLinkedin className="w-6 h-6 text-indigo-600" />
+                      <div>
+                        <p className="text-md text-gray-700">
+                          <a
+                            href="https://www.linkedin.com/in/yavuz-dereli/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            LinkedIn Profile
+                          </a>
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* WhatsApp */}
+                    <div className="flex items-center gap-3 text-gray-700">
+                      <FiMessageCircle className="w-6 h-6 text-indigo-600" />
+                      <div>
+                        <p className="text-md text-gray-700">
+                          <a
+                            href="https://wa.me/31644010132"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            Chat on WhatsApp
+                          </a>
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -151,7 +182,7 @@ const Contact: React.FC = () => {
                 name="message"
                 value={formData.message}
                 onChange={handleInputChange}
-                placeholder="Message"
+                placeholder="How can we help you?"
                 className="w-full h-32 text-gray-600 placeholder-gray-500 bg-transparent text-lg shadow-sm font-normal leading-7 rounded-2xl border border-gray-200 focus:outline-none pl-4 pt-2"
                 required
               />
