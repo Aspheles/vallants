@@ -79,7 +79,7 @@ const Contact: React.FC = () => {
           </div>
 
           {/* Right Section */}
-          <div className="bg-white p-6 lg:p-11 rounded-r-lg shadow-lg">
+          <div className="bg-gray-100 p-6 lg:p-11 rounded-r-lg shadow-lg">
             <h2 className="text-4xl font-semibold text-[#6A00A1] mb-11">
               Send A Message
             </h2>
@@ -121,7 +121,7 @@ const Contact: React.FC = () => {
               <button
                 type="submit"
                 disabled={isSending}
-                className="w-full h-12 text-white text-base font-semibold leading-6 rounded-full transition-all duration-700 bg-[#6A00A1] shadow-sm"
+                className="w-full h-12 text-white text-base font-semibold leading-6 rounded-full transition-all duration-700 bg-[#6A00A1] hover:bg-[#693483] shadow-sm"
               >
                 {isSending ? "Sending..." : "Send"}
               </button>
