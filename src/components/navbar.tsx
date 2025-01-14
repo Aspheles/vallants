@@ -24,7 +24,7 @@ const Navbar: React.FC = () => {
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex space-x-12 text-2xl font-semibold">
-          {["/", "/about", "/pricing"].map((path, index) => (
+          {["/", "/about", "/pricing", "/contact"].map((path, index) => (
             <li key={index}>
               <NavLink
                 to={path}

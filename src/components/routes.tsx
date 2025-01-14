@@ -6,6 +6,7 @@ import About from "../pages/about";
 import Pricing from "../pages/pricing";
 import NotFound from "../pages/notfound";
 import Cases from "../pages/cases";
+import Contact from "../pages/contact";
 
 const AppRoutes: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ const AppRoutes: React.FC = () => {
       <Route path="/about" element={<About />} />
       <Route path="/pricing" element={<Pricing />} />
       <Route path="/cases" element={<Cases />} />
+      <Route path="/contact" element={<Contact />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

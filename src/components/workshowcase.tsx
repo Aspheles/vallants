@@ -7,20 +7,6 @@ const WorkShowcase = () => {
       description: "A captivating project focused on modern design.",
       link: "https://moonlightphoto.nl",
     },
-    {
-      id: 2,
-      image: "./moonlight.png",
-      title: "Project Moonlight",
-      description: "An innovative platform for collaborative work.",
-      link: "https://moonlightphoto.nl",
-    },
-    {
-      id: 3,
-      image: "./moonlight.png",
-      title: "Project Moonlight",
-      description: "A futuristic approach to creative solutions.",
-      link: "https://moonlightphoto.nl",
-    },
   ];
 
   return (
@@ -31,16 +17,16 @@ const WorkShowcase = () => {
         </h1>
 
         <div className="mt-10 mb-12 px-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
+          <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 gap-6 ">
             {projects.map((project) => (
               <div
                 key={project.id}
-                className="relative group overflow-hidden rounded-lg shadow-lg bg-gray-100"
+                className="lg:w-[800px] md:w-full relative group overflow-hidden rounded-lg shadow-lg justify-center items-center mx-auto"
               >
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover duration-300 group-hover:scale-105 shadow-lg"
+                  className="h-full object-cover duration-300 group-hover:scale-105 shadow-lg"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 duration-300 flex items-center justify-center">
                   <div className="text-center text-white p-4">

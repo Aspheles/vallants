@@ -1,10 +1,9 @@
 import React from "react";
 import { FaInstagram } from "react-icons/fa";
-import { useModal } from "../utils/ModalContext";
+
 import { Link } from "react-router-dom";
 
 const Footer: React.FC = () => {
-  const { openModal } = useModal();
   return (
     <footer className="bg-gray-100 py-8">
       <div className="container mx-auto px-4">
@@ -73,12 +72,11 @@ const Footer: React.FC = () => {
                     </Link>
                   </li>
                   <li>
-                    <a
-                      onClick={openModal}
-                      className="text-gray-600 hover:text-gray-800 transition-colors duration-300 cursor-pointer"
-                    >
-                      Contact Us
-                    </a>
+                    <Link reloadDocument to={"/contact"}>
+                      <a className="text-gray-600 hover:text-gray-800 transition-colors duration-300 cursor-pointer">
+                        Contact Us
+                      </a>
+                    </Link>
                   </li>
                 </ul>
               </div>

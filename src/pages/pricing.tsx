@@ -1,5 +1,5 @@
 import React from "react";
-import { useModal } from "../utils/ModalContext";
+import { Link } from "react-router-dom";
 
 type Plan = {
   name: string;
@@ -10,8 +10,6 @@ type Plan = {
 };
 
 const Pricing: React.FC = () => {
-  const { openModal } = useModal();
-
   const plans: Plan[] = [
     {
       name: "Starter Plan",
@@ -135,12 +133,11 @@ const Pricing: React.FC = () => {
               ))}
             </ul>
             <div className="mt-auto">
-              <a
-                onClick={openModal}
-                className="text-white bg-[#6A00A1] hover:bg-purple-700 font-medium rounded-full text-lg px-6 py-3 transition-all duration-300 cursor-pointer"
-              >
-                Contact Us
-              </a>
+              <Link reloadDocument to={"/contact"}>
+                <a className="text-white bg-[#6A00A1] hover:bg-purple-700 font-medium rounded-full text-lg px-6 py-3 transition-all duration-300 cursor-pointer">
+                  Contact Us
+                </a>
+              </Link>
             </div>
           </div>
         ))}
