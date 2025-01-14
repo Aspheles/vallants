@@ -1,8 +1,9 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 type FAQ = {
   question: string;
-  answer: string;
+  answer: JSX.Element;
 };
 
 const FAQSection: React.FC = () => {
@@ -15,28 +16,56 @@ const FAQSection: React.FC = () => {
   const faqs: FAQ[] = [
     {
       question: "What services do you offer?",
-      answer:
-        "We provide a range of services including planning, design, development, testing, and support tailored to your needs.",
+      answer: (
+        <p>
+          We provide a range of services including planning, design,
+          development, testing, and support tailored to your needs.
+        </p>
+      ),
     },
     {
       question: "How long does a project take?",
-      answer:
-        "The timeline depends on the complexity and scope of the project. On average, projects take 4-8 weeks to complete.",
+      answer: (
+        <p>
+          The timeline depends on the complexity and scope of the project. On
+          average, projects take 4-8 weeks to complete.
+        </p>
+      ),
     },
     {
       question: "What is your pricing model?",
-      answer:
-        "Our pricing is flexible and based on the specific requirements of your project. Contact us for a custom quote.",
+      answer: (
+        <p>
+          Our pricing model can be found on our{" "}
+          <Link reloadDocument to="/pricing" className="text-blue-500">
+            pricing page
+          </Link>
+          , where you'll find detailed information about our pricing structure
+          based on your needs.
+        </p>
+      ),
     },
     {
       question: "Do you offer ongoing support?",
-      answer:
-        "Yes, we provide ongoing support and maintenance to ensure your solution runs smoothly.",
+      answer: (
+        <p>
+          Yes, we provide ongoing support and maintenance to ensure your
+          solution runs smoothly.
+        </p>
+      ),
     },
     {
       question: "How do I get started?",
-      answer:
-        "You can get started by reaching out to us through our contact form or giving us a call. We'll guide you through the next steps.",
+      answer: (
+        <p>
+          To get started, please visit our{" "}
+          <Link reloadDocument to="/contact" className="text-blue-500">
+            contact page
+          </Link>
+          , where you can reach out to us with your project details, and we'll
+          guide you through the next steps.
+        </p>
+      ),
     },
   ];
 
@@ -80,10 +109,9 @@ const FAQSection: React.FC = () => {
                   openIndex === index ? "max-h-screen" : "max-h-0"
                 }`}
               >
-                <div
-                  className="px-6 py-4 text-gray-600 bg-white rounded-b-lg"
-                  dangerouslySetInnerHTML={{ __html: faq.answer }}
-                ></div>
+                <div className="px-6 py-4 text-gray-600 bg-white rounded-b-lg">
+                  {faq.answer}
+                </div>
               </div>
             </div>
           ))}
