@@ -26,7 +26,7 @@ const WorkShowcase = () => {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="h-full object-cover duration-300 group-hover:scale-105 shadow-lg"
+                  className="object-cover duration-300 group-hover:scale-105 shadow-lg"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 duration-300 flex items-center justify-center">
                   <div className="text-center text-white p-4">

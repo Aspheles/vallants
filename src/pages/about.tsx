@@ -13,19 +13,19 @@ const About: React.FC = () => {
     {
       image: "./team/yavuz.png",
       name: "Yavuz Dereli",
-      position: "Lead Developer & Owner",
+      position: "Founder & lead developer",
       linkedin: "https://www.linkedin.com/in/yavuz-dereli/",
     },
     {
       image: "./team/yuli.png",
       name: "Faruyili Pazli",
-      position: "Digital Marketing Specialist",
+      position: "Operations support specialist",
       linkedin: "https://www.linkedin.com/in/faruyili-pazli-123564107/",
     },
     {
       image: "./team/wilkins.png",
       name: "Wilkins Mendoza",
-      position: "Lead Designer",
+      position: "Lead graphic designer",
       linkedin: "https://www.linkedin.com/in/wilkins-mendoza-b347a2346/",
     },
   ];

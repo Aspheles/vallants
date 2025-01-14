@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 type Plan = {
   name: string;
@@ -73,8 +72,8 @@ const Pricing: React.FC = () => {
           Plans & Pricing
         </h2>
         <p className="mb-5 text-lg font-light text-gray-200 sm:text-xl">
-          Here at Vallants, we focus on affordable solutions for starting
-          businesses.
+          We at vallants are committed to delivering budget-friendly solutions
+          that empower starting businesses to succeed.
         </p>
       </div>
       <div className="grid lg:grid-cols-3 sm:gap-8 gap-8 sm:text-left text-center sm:items-stretch items-center justify-center">
@@ -132,16 +131,17 @@ const Pricing: React.FC = () => {
                 </li>
               ))}
             </ul>
-            <div className="mt-auto">
-              <Link reloadDocument to={"/contact"}>
-                <a className="text-white bg-[#6A00A1] hover:bg-purple-700 font-medium rounded-full text-lg px-6 py-3 transition-all duration-300 cursor-pointer">
-                  Contact Us
-                </a>
-              </Link>
-            </div>
           </div>
         ))}
       </div>
+
+      {/* <div className="flex justify-center py-8">
+        <Link reloadDocument to={"/contact"}>
+          <a className="text-black bg-white hover:bg-purple-100 font-semibold rounded-full text-lg px-6 py-3 transition-all duration-300 cursor-pointer">
+            Contact Us
+          </a>
+        </Link>
+      </div> */}
     </div>
   );
 };

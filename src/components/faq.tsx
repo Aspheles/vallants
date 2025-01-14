@@ -18,8 +18,9 @@ const FAQSection: React.FC = () => {
       question: "What services do you offer?",
       answer: (
         <p>
-          We provide a range of services including planning, design,
-          development, testing, and support tailored to your needs.
+          We specialise in planning, designing, developing, testing and
+          supporting projects, ensuring every solution is customized to fit your
+          needs.
         </p>
       ),
     },
@@ -27,8 +28,9 @@ const FAQSection: React.FC = () => {
       question: "How long does a project take?",
       answer: (
         <p>
-          The timeline depends on the complexity and scope of the project. On
-          average, projects take 4-8 weeks to complete.
+          While timelines can vary depending on the project's complexity and
+          scope, most are completed within 4 to 8 weeks, allowing for thorough
+          planning and execution.
         </p>
       ),
     },
@@ -42,6 +44,22 @@ const FAQSection: React.FC = () => {
           </Link>
           , where you'll find detailed information about our pricing structure
           based on your needs.
+        </p>
+      ),
+    },
+    {
+      question:
+        "Why do your services cost more than other companies offering the same solutions?",
+      answer: (
+        <p>
+          Our pricing reflects the value we provide through advanced frameworks
+          and modern technologies that ensure clean, responsive and highly
+          optimized solutions across all devices, including mobile. Unlike
+          others, we focus on delivering custom designs tailored specifically to
+          reflect your brand's unique identity. this approach guarantees a
+          website that not only looks great but also performs seamlessly on
+          desktops, tablets and smartphones, offering a superior user experience
+          and a better long-term investment for your business.
         </p>
       ),
     },
@@ -70,7 +88,7 @@ const FAQSection: React.FC = () => {
   ];
 
   return (
-    <section className="w-full h-[600px] bg-gradient-to-br from-[#1D0D4C] via-[#470981] to-[#A900FF] flex items-center">
+    <section className="w-full bg-gradient-to-br from-[#1D0D4C] via-[#470981] to-[#A900FF] flex items-center py-8">
       <div className="w-11/12 md:w-3/4 lg:w-2/3 mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-white pb-12">
           Frequently Asked Questions

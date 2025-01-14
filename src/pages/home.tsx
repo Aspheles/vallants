@@ -22,7 +22,7 @@ const Home: React.FC = () => {
           Welcome to Vallants
         </h1>
         <p className="text-lg md:text-xl text-gray-300 mb-8">
-          Creating your websites starts from small.
+          Starting small, reflecting your brand - one website at a time
         </p>
         <div className="flex space-x-4">
           <button

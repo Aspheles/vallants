@@ -13,7 +13,7 @@ const WhyChooseUs = () => {
     },
     {
       icon: <img src="./advantages/img_wcu03.png" />,
-      title: "Provide affordable solutions without sacrificing quality",
+      title: "Balancing affordability and quality to meet your needs",
       description: "Without sacrificing quality",
     },
     {
