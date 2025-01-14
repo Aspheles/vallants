@@ -62,7 +62,7 @@ const Navbar: React.FC = () => {
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
         <ul className="md:hidden flex flex-col items-center space-y-6 bg-[#f9f9f9] py-4">
-          {["/", "/about", "/pricing"].map((path, index) => (
+          {["/", "/about", "/pricing", "/contact"].map((path, index) => (
             <li key={index}>
               <NavLink
                 to={path}
