@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
-import { FiPhone, FiMail, FiLinkedin, FiMessageCircle } from "react-icons/fi";
+import { FiPhone, FiMail, FiMessageCircle } from "react-icons/fi";
 
 interface FormData {
   firstName: string;
@@ -72,7 +72,7 @@ const Contact: React.FC = () => {
 
             {/* Overlay Content */}
             <div className="absolute inset-0 bg-black bg-opacity-30 flex justify-center items-center">
-              <div className="bg-white p-6 rounded-lg shadow-lg w-[90%] md:w-[60%] text-center">
+              <div className="bg-white p-6 rounded-none md:rounded-lg shadow-lg w-[100%]  md:w-[60%] text-center">
                 <h3 className="text-xl font-bold text-gray-800 mb-4">
                   Let's keep in touch!
                 </h3>
@@ -95,22 +95,6 @@ const Contact: React.FC = () => {
                         <p className="text-md text-gray-700">
                           <a href="mailto:vallants.dev@gmail.com">
                             vallants.dev@gmail.com
-                          </a>
-                        </p>
-                      </div>
-                    </div>
-
-                    {/* LinkedIn */}
-                    <div className="flex items-center gap-3 text-gray-700">
-                      <FiLinkedin className="w-6 h-6 text-indigo-600" />
-                      <div>
-                        <p className="text-md text-gray-700">
-                          <a
-                            href="https://www.linkedin.com/in/yavuz-dereli/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            LinkedIn Profile
                           </a>
                         </p>
                       </div>
